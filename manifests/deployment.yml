@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "testcluster-ca11"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "testcluster-ca11"
+    spec:
+      containers:
+        - name: "testcluster-ca11"
+          image: "fhlkube.azurecr.io/testcluster"
+          ports:
+          - containerPort: 80
