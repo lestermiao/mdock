@@ -1,8 +1,11 @@
-apiVersion : apps/v1beta1
+apiVersion : apps/v1
 kind: Deployment
 metadata:
   name: "testcluster-c321"
 spec:
+  selector:
+    matchLabels:
+      app: "testcluster-c321"
   replicas: 2
   template:
     metadata:
