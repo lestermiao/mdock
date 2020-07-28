@@ -55,8 +55,8 @@ jobs:
       with:
         namespace: testcluster761a
         manifests: |
-          manifests/deployment-1.yml
-          manifests/service-1.yml
+          manifests/deployment.yml
+          manifests/service.yml
         images: |
           myfhlacr.azurecr.io/testcluster:${{ github.sha }}
         imagepullsecrets: |
